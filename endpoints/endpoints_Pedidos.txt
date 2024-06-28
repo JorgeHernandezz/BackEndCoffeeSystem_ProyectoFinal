@@ -1,0 +1,51 @@
+--- Generar, Cancelar y Pagar pedido ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Generar Pedido
+Tipo: GET
+URL:	http://localhost:4000/api/pedidos
+
+ 
+
+-- Cancelar Pedido
+Tipo: POST
+URL:	http://localhost:4000/api/pedidos/cancelarPedido
+Body:	{
+    "nombrePedido": "Oder Franco Olvera_1686614188075"
+}
+
+
+
+-- Pagar Pedido
+Tipo: POST
+URL:	http://localhost:4000/api/pedidos/pagarPedido
+Body:	{
+    "nombrePedido": "Oder Franco Olvera_1687193691033",
+    "metodoPago": "Tarjeta de débito o crédito",
+    "metodoEntrega": "En dirección indicada",
+    "fechaEntrega": "Fri Jun 16 2023 22:13:39 GMT-0600 (hora estándar central)",
+    "tarjetaPedido": {
+        "numTarjeta_P": "4111111111111111",
+        "fechaVencimiento_P": "453",
+        "cvv_P": "201"
+    },
+    "destinoPedido": {
+        "codigoPostal_P": "31548",
+        "colonia_P": "asdf",
+        "calle_P": "asdf",
+        "numInt_P": "1",
+        "numExt_P": "2"
+    }
+}
+
+
+
+--- Solicitudes ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Solicitar reembolso
+URL:	http://localhost:4000/api/pedidos/solicitarReembolso
+Body:	{
+    "nombrePedido": "Oder Franco Olvera_1686614535962",
+    "returnMotif": "Salió feo."
+}

@@ -1,0 +1,57 @@
+--- CRUD Temporadas ---
+(Requieren de un JWT DEL ADMINISTRADOR para poder funcionar)
+
+-- Crear temporada
+Tipo: POST
+URL:	http://localhost:4000/api/temporada
+json:	{
+    "nombreTemporada": "Verano",
+    "peluches": ["Pingüino2",
+    "Oso Cariñoso"],
+    "flores": ["Rosa roja",
+    "Girasol de Europa del Este"],
+    "descrTemporada": "Para un verano caluroso",
+    "descuentoTemporada": 15,
+    "fecInit": "2023/06/1",
+    "fecEnd": "2023/06/30"
+}
+
+
+
+-- Modificar Temporada
+Tipo: POST
+URL:	http://localhost:4000/api/temporada/modificarTemporada
+json:	{
+    "nombreTemporada": "Verano",
+    "newName": "Verano",
+    "flores": ["Girasol de Europa del Este"],
+    "peluches": ["Oso Cariñoso"],
+    "descrTemporada": "Hace muy poco frío en el invierno",
+    "descuentoTemporada": 44,
+    "fecInit": "2023/06/1",
+    "fecEnd": "2023/06/30"
+}
+
+
+
+-- Ver Temporada
+Tipo: POST
+URL:	http://localhost:4000/api/temporada/verTemporada
+json:	{
+    "nombreTemporada": "Invierno"
+}
+
+
+
+-- Eliminar Temporada
+Tipo: POST
+URL:	http://localhost:4000/api/temporada/eliminarTemporada
+json:	{
+    "nombreTemporada": "Invierno"
+}
+
+
+
+-- Mostrar temporadas
+Tipo: GET (No requiere autorización de JWT)
+URL:	http://localhost:4000/api/temporada/mostrarTemporada

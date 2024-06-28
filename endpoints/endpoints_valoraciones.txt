@@ -1,0 +1,29 @@
+--- Valoraciones y comentarios ---
+(Requieren de un JWT DEL CLIENTE para poder funcionar)
+
+-- Valorar producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/interaccionPro/valorar
+json:	{
+    "nombreProducto": "Pingüino",
+    "valoracion": 4
+}
+
+
+
+-- Comentar producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/interaccionPro/comentar
+json:	{
+    "nombreProducto": "Pingüino2",
+    "comentario": "No está chido"
+}
+
+
+
+-- Ver producto a valorar
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/interaccionPro/verAValorar
+json:	{
+    "nombreProducto": "Pingüino3"
+}

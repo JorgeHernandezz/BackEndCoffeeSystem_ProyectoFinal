@@ -1,0 +1,56 @@
+--- Modificar Datos Personales (Cliente) ---
+(Requieren JWT de Cliente)
+
+-- Modificar username
+Tipo:   POST
+URL:	http://localhost:27017/api/cliente/modificar/username
+Body:	{
+    "nombre": "Oder",
+    "apellido": "Franco Olvera"
+}
+
+
+-- Modificar Password
+Tipo:   POST
+URL:	http://localhost:27017/api/cliente/modificar/password
+Body:	{
+    "newPassword": "ahrisu123"
+}
+
+
+
+-- Modificar Número Telefónico
+Tipo:   POST
+URL:	http://localhost:27017/api/cliente/modificar/telefono
+Body:	{
+    "telefono": "5588888888"
+}
+
+
+
+-- Modificar/Añadir Dirección
+Tipo:   POST
+URL:	http://localhost:4000/api/cliente/modificar/direccion
+Body:	{
+    "col": "altavilla",
+    "cal": "temascaltepec",
+    "cp": "12345",
+    "nInt": "",
+    "nExt": "14",
+    "calle1": "asdf",
+    "calle2": "qwerty",
+    "adicionales": "En frente de unos tacos"
+}
+
+
+
+-- Modificar/Añadir Tarjeta
+Tipo:   POST
+URL:	http://localhost:4000/api/cliente/modificar/tarjeta
+Body:	{
+    "num": "4111111111111111",
+    "fecha": "0525",
+    "c": "127",
+    "titular": "14"
+}
+(Este endpoint valida que el número de tarjeta sea válido. El número del ejemplo es válido)

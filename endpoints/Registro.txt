@@ -1,0 +1,21 @@
+--- Registro de cuenta para administrador y cliente ---
+
+-- Registro Cliente
+url:	http://localhost:27017/api/cliente
+json:	{
+    "nombreCliente": "Demian",
+    "apellidoCliente": "Franco",
+    "passwordCliente": "password",
+    "emailCliente": "arisuodelagtv@gmail.com"
+}
+
+
+
+-- Registro Administrador
+url:	http://localhost:27017/api/administrador
+json:	{
+    "nombreAdministrador": "La Luna",
+    "apellidoAdministrador": "Luna",
+    "passwordAdministrador": "password",
+    "emailAdministrador": "lalunaluna1950@gmail.com"
+}

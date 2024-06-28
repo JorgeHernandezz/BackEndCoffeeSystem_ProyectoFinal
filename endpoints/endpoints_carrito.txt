@@ -1,0 +1,48 @@
+--- Operaciones Carrito de Compras ---
+(Requieren de un JWT DEL CLIENTE para poder funcionar)
+
+-- Agregar Producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/carrito/agregarProducto
+json:	{
+    "nombreProducto": "Rosa roja"
+}
+
+
+
+-- Incrementar Producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/carrito/incrementarProducto
+json:	{
+    "nombreProducto": "Rosa roja"
+}
+
+
+
+-- Decrementar Producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/carrito/decrementarProducto
+json:	{
+    "nombreProducto": "Rosa roja"
+}
+
+
+
+-- Eliminar Producto
+Tipo: POST
+URL:	http://localhost:4000/api/cliente/carrito/eliminarProducto
+json:	{
+    "nombreProducto": "Rosa roja"
+}
+
+
+
+-- Vaciar Carrito
+Tipo: GET (Sí requiere el JWT)
+URL:	http://localhost:4000/api/cliente/carrito/vaciarCarrito
+
+
+
+-- Visualizar Carrito
+Tipo: GET (Sí requiere el JWT)
+URL:	http://localhost:4000/api/cliente/carrito/visualizarCarrito

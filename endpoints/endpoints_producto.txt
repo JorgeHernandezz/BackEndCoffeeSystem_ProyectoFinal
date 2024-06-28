@@ -1,0 +1,73 @@
+--- CRUD ---
+(Todas estas operaciones requieren de un Bearer Token en autorización para utilizarse; dicho Bearer Token será el JWT que se guarda en Local Storage al iniciar sesión como admin).
+
+-- Registrar Producto
+URL:	http://localhost:27017/api/productos
+Body:	{
+    "nombreProducto": "Girasol",
+    "descrProducto": "Un girasol",
+    "tipoProducto": "Flor",
+    "precioProducto": 150,
+    "categoriaProducto": "General",
+    "cantidadInv": 15,
+    "descuentoProducto": 10,
+    "imagenes": ["D:/Respaldo/Documentos/Doc. Escuela/ESCOM/Semestre 6/2_ADS/Proyectos/imagenes/250px-A_sunflower.jpg",
+    "D:/Respaldo/Documentos/Doc. Escuela/ESCOM/Semestre 6/2_ADS/Proyectos/imagenes/descargar.jpg",
+    "D:/Respaldo/Documentos/Doc. Escuela/ESCOM/Semestre 6/2_ADS/Proyectos/imagenes/Helianthus_annuus_001.jpg"]
+}
+(El campo «descuentoProducto» es opcional.).
+
+
+
+-- Modificar Producto
+URL:	http://localhost:27017/api/productos/modificarProducto
+Body:	{
+    "nombreProducto": "Girasol de Europa",
+    "nuevoNombre": "Girasol de Europa del Este",
+    "descrProducto": "Un girasol importado desde lejos",
+    "tipoProducto": "Flor",
+    "precioProducto": 800,
+    "cantidadInv": 3, 
+    "categoriaProducto": "Especial",
+    "imagenesAdd": [],
+    "imagenesRem": []
+}
+(El campo «imagenesAdd» lleva Strings y el campo «imagenesRem» lleva enteros. Van vacíos por defecto).
+
+
+
+-- Ver Producto
+URL:	http://localhost:27017/api/productos/verProducto
+Body:	{
+    "nombreProducto": "Oso Cariñoso"
+}
+
+
+
+-- Eliminar Producto
+URL:	http://localhost:27017/api/productos/eliminarProducto
+Body:	{
+    "nombreProducto": "Girasol"
+}
+
+
+
+-- Mostrar Productos
+(No utiliza Bearer Token)
+URL:	http://localhost:4000/api/productos/mostrarProductos
+(Operación de tipo GET)
+
+
+
+--- Catálogo ---
+(Esta operación no requiere un Bearer Token).
+
+-- mostrarFlores
+URL:	http://localhost:27017/api/productos/mostrarFlores
+(Operación de tipo GET)
+
+
+
+-- mostrarPeluches
+URL:	http://localhost:27017/api/productos/mostrarPeluches
+(Operación de tipo GET)

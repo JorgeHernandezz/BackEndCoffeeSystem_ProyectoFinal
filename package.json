@@ -1,0 +1,36 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Prueba de MERN",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "preinstall": "chmod +x ./node_modules/.bin/node-pre-gyp",
+    "postinstall": "npm rebuild bcrypt"
+  },
+  "keywords": [
+    "MERN",
+    "Node"
+  ],
+  "author": "Demian Franco",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.0",
+    "card-validator": "^8.1.1",
+    "cloudinary": "^1.41.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.7.0",
+    "nodemailer": "^6.9.2",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

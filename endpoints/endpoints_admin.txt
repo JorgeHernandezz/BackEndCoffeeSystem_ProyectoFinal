@@ -1,0 +1,95 @@
+--- Registro & Login ---
+
+-- Registrar Administrador
+URL:	http://localhost:27017/api/administrador
+Body:	{
+    "nombreAdministrador": "La Luna Luna",
+    "passwordAdministrador": "password",
+    "emailAdministrador": "lalunaluna1950@gmail.com"
+}
+
+
+-- Confirmar Administrador
+URL:	http://localhost:27017  
+(Dinámico, de tipo GET; cambiar el número del final por un token válido)
+
+
+
+-- Autenticación Administrador
+URL:	http://localhost:27017/api/administrador/iniSes
+Body:	{
+    "emailAdministrador": "lalunaluna1950@gmail.com",
+    "passwordAdministrador": "lunaluna"
+}
+
+
+
+--- Olvidé Password ---
+
+-- Olvidé Password Admin
+URL:	http://localhost:27017/api/administrador/olvide-password
+Body:	{
+    "emailAdministrador": "lalunaluna1950@gmail.com"
+}
+
+
+
+-- Verificar Token Admin
+URL:	http://localhost:27017/api/administrador/olvide-password/83142
+(Dinámico, de tipo GET; cambiar el número del final por un token válido)
+
+
+
+-- Nuevo Password Admin
+URL:	http://localhost:27017/api/administrador/olvide-password/83142
+(Dinámico, de tipo POST; cambiar el número del final por un token válido)
+Body:	{
+    "nuevaPassword": "lunaluna"
+}
+
+
+
+--- Interactuar con pedidos --- 
+(Requieren JWT de administrador)
+
+-- Mostrar Pedidos
+Tipo: GET
+URL: http://localhost:4000/api/administrador/pedidos/mostrarPedidos
+
+
+
+-- Mostrar Pedidos con solicitud de devolución
+Tipo: GET
+URL: http://localhost:4000/api/administrador/pedidos/mostrarPedidosAReembolsar
+
+
+
+-- Mostrar Pedidos Cancelados
+Tipo: GET
+URL: http://localhost:4000/api/administrador/pedidos/mostrarPedidosCancelados
+
+
+
+-- Mostrar pedidos devueltos (autorizados o no)
+Tipo: GET
+URL: http://localhost:4000/api/administrador/pedidos/mostrarReembolsos
+
+
+
+-- Autorizar devoluciones
+Tipo: POST
+URL: http://localhost:4000/api/administrador/pedidos/autorizarReembolso
+JSON: {
+    "nombrePedido": "Oder Franco Olvera_1687193691033",
+    "status": "Rechazada"
+}
+
+
+
+-- Modificar estado del pedido
+Tipo: POST
+URL: http://localhost:4000/api/administrador/pedidos/modificarEstado
+JSON: {
+    "nombrePedido": "Oder Franco Olvera_1687193691033",
+    "status": "En camino"
+}

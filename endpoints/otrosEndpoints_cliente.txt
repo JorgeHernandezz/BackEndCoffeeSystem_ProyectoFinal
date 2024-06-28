@@ -1,0 +1,91 @@
+--- Obtener direcciones y tarjetas del cliente ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Ver tarjetas
+Tipo:	GET
+URL:	http://localhost:4000/api/cliente/interaccionPed/verTarjetas
+
+
+
+-- Ver direcciones
+Tipo:	GET
+URL:	http://localhost:4000/api/cliente/interaccionPed/verDirecciones
+
+
+
+--- Visualizar pedidos realizados---
+(Requieren autenticación (JWT) del cliente)
+
+
+-- Visualizar pedidos
+Tipo: GET
+URL:	http://localhost:4000/api/cliente/interaccionPed/visualizar
+
+
+
+-- Visualizar pedidos entregados
+Tipo: GET
+URL:	http://localhost:4000/api/cliente/interaccionPed/visualizarEntregados
+
+
+
+-- Visualizar seguimiento de pedido
+Tipo: POST
+URL:   http://localhost:4000/api/cliente/interaccionPed/visualizarSeguimiento 
+JSON: {
+    "nombrePedido": "Oder Franco Olvera_1687316573369"
+}
+
+
+
+--- Personalizar Producto ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Ver Flores
+Tipo: GET
+URL:	http://localhost:4000/api/cliente/interaccionPro/verFlores
+
+
+
+-- Ver Peluches
+Tipo: GET
+URL:	http://localhost:4000/api/cliente/interaccionPro/verPeluches
+
+
+
+--- Favoritos ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Agregar Favoritos
+Tipo: POST
+URL:    http://localhost:4000/api/cliente/interaccionPro/agregarFavoritos
+JSON: {
+    "nombreProducto": "Rosa roja"
+}
+
+
+
+-- Ver Favoritos
+Tipo: GET
+URL:    http://localhost:4000/api/cliente/interaccionPro/verFavoritos
+
+
+
+-- Eliminar Favoritos
+Tipo: POST
+URL:    http://localhost:4000/api/cliente/interaccionPro/eliminarFavoritos
+JSON: {
+    "nombreProducto": "Rosa muy muy roja"
+}
+
+
+
+--- Visualizar valoraciones ---
+(Requieren autenticación (JWT) del cliente)
+
+-- Visualizar valoraciones & comentarios
+Tipo: POST
+URL:    http://localhost:4000/api/cliente/interaccionPro/visualizarVC
+JSON: {
+    "nombreProducto": "Pingüino2"
+}
